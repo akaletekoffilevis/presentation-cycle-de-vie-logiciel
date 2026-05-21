@@ -73,37 +73,37 @@
             </div>
         </main>
         
-        <!-- Commentaires/Feedback Section -->
-        <section class="feedback-section">
-            <h2>Laissez votre feedback</h2>
-            <form id="feedbackForm">
-                <div class="form-group">
-                    <label for="feedbackName">Nom</label>
-                    <input type="text" id="feedbackName" name="name" required placeholder="Votre nom">
-                </div>
-                <div class="form-group">
-                    <label for="feedbackEmail">Email</label>
-                    <input type="email" id="feedbackEmail" name="email" required placeholder="Votre email">
-                </div>
-                <div class="form-group">
-                    <label for="feedbackRating">Note</label>
-                    <div class="rating-stars">
-                        <span class="star" data-value="1">☆</span>
-                        <span class="star" data-value="2">☆</span>
-                        <span class="star" data-value="3">☆</span>
-                        <span class="star" data-value="4">☆</span>
-                        <span class="star" data-value="5">☆</span>
-                    </div>
-                    <input type="hidden" id="feedbackRatingValue" name="rating" value="0">
-                </div>
-                <div class="form-group">
-                    <label for="feedbackMessage">Message</label>
-                    <textarea id="feedbackMessage" name="message" rows="4" required placeholder="Partagez vos pensées sur cette présentation..."></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Envoyer le feedback</button>
-            </form>
-            <div id="feedbackResponse" class="feedback-response"></div>
-        </section>
+<!-- Commentaires/Feedback Section -->
+<section class="feedback-section">
+    <h2>Laissez votre feedback</h2>
+    <form id="feedbackForm" action="https://formspree.io/f/koffilevis21@gmail.com" method="POST">
+        <div class="form-group">
+            <label for="feedbackName">Nom</label>
+            <input type="text" id="feedbackName" name="name" required placeholder="Votre nom">
+        </div>
+        <div class="form-group">
+            <label for="feedbackEmail">Votre Email</label>
+            <input type="email" id="feedbackEmail" name="_replyto" required placeholder="Votre email">
+        </div>
+        <div class="form-group">
+            <label for="feedbackRating">Note</label>
+            <div class="rating-stars">
+                <span class="star" data-value="1">☆</span>
+                <span class="star" data-value="2">☆</span>
+                <span class="star" data-value="3">☆</span>
+                <span class="star" data-value="4">☆</span>
+                <span class="star" data-value="5">☆</span>
+            </div>
+            <input type="hidden" id="feedbackRatingValue" name="rating" value="0">
+        </div>
+        <div class="form-group">
+            <label for="feedbackMessage">Message</label>
+            <textarea id="feedbackMessage" name="message" rows="4" required placeholder="Partagez vos pensées sur cette présentation..."></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Envoyer le feedback</button>
+    </form>
+    <div id="feedbackResponse" class="feedback-response"></div>
+</section>
         
         <footer>
             <p>Vidéo de présentation - © 2026 Koffi Lévis Akalete</p>
