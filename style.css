@@ -5,6 +5,242 @@
 }
 
 body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #fdf6e3; /* Parchment/paper color */
+    color: #5d4037; /* Dark brown for text */
+    line-height: 1.6;
+    padding: 20px;
+    background-image: 
+        radial-gradient(circle at center bottom, rgba(180, 140, 100, 0.1) 0%, transparent 20%),
+        repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(180, 140, 100, 0.05) 35px, rgba(180, 140, 100, 0.05) 70px);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: rgba(255, 253, 208, 0.9); /* Slightly off-white for container */
+    border: 1px solid #c8a165; /* Light brown border */
+    border-radius: 12px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.15),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+    padding: 25px;
+    position: relative;
+}
+
+/* Add decorative corner elements */
+.container::before,
+.container::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="%23c8a165" d="M0,0 L20,0 L20,20 L0,20 Z M5,5 L15,5 L15,15 L5,15 Z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container::before {
+    top: -10px;
+    left: -10px;
+}
+
+.container::after {
+    bottom: -10px;
+    right: -10px;
+    transform: rotate(180deg);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #c8a165;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+    color: #3e2723; /* Very dark brown */
+    font-weight: normal;
+    letter-spacing: -0.5px;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #5d4037;
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.main-content {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    border: 1px solid #e8d5b4;
+}
+
+.video-container {
+    position: relative;
+    background-color: #000;
+    overflow: hidden;
+}
+
+/* Video frame effect - like an old photograph */
+.video-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid #3e2723;
+    pointer-events: none;
+}
+
+.video-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(rgba(0,0,0,0.1) 0%, transparent 40%, transparent 60%, rgba(0,0,0,0.1) 100%),
+        linear-gradient(90deg, rgba(0,0,0,0.1) 0%, transparent 40%, transparent 60%, rgba(0,0,0,0.1) 100%);
+    pointer-events: none;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+    background-color: #000;
+}
+
+/* Add subtle film grain effect */
+.video-container {
+    background-image: 
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.95;
+}
+
+.video-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter2'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter2)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px dashed #c8a165;
+    color: #6d4c41;
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Add some decorative elements */
+.decorative-divider {
+    height: 2px;
+    background: 
+        repeating-linear-gradient(
+            to right,
+            #c8a165,
+            #c8a165 5px,
+            transparent 5px,
+            transparent 10px
+        );
+    margin: 25px 0;
+    border-radius: 1px;
+}
+
+.ornament {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23c8a165" d="M12,2 L13.5,8.5 L20.5,9 L15,13.5 L16.5,20.5 L12,17 L7.5,20.5 L9,13.5 L3.5,9 L10.5,8.5 Z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 8px;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 15px;
+        padding: 20px;
+    }
+    
+    header h1 {
+        font-size: 1.9rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+    
+    .container::before,
+    .container::after {
+        width: 15px;
+        height: 15px;
+        top: -8px;
+        left: -8px;
+    }
+    
+    .container::after {
+        bottom: -8px;
+        right: -8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    header h1 {
+        font-size: 1.6rem;
+    }
+    
+    header p {
+        font-size: 0.9rem;
+    }
+    
+    .container::before,
+    .container::after {
+        width: 10px;
+        height: 10px;
+        top: -5px;
+        left: -5px;
+    }
+    
+    .container::after {
+        bottom: -5px;
+        right: -5px;
+    }
+}
+
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f8f9fa;
     color: #333;
