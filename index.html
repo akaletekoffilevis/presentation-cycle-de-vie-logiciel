@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation - Cycle de vie logiciel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Présentation du Cycle de vie d'une application</h1>
+            <p>Découvrez les différentes étapes du développement logiciel, de la conception à la maintenance</p>
+        </header>
+        <main>
+            <div class="video-container">
+                <video id="presentationVideo" poster="Debut.jpeg">
+                    <source src="koffi_levis_akalete_cycle_vie_logiciel.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la balise vidéo.
+                </video>
+                <div class="controls-overlay">
+                    <button id="playPauseBtn" title="Play/Pause">▶</button>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                    <div class="video-time" id="videoTime">00:00 / 00:00</div>
+                    <button id="muteBtn" title="Muet/Son">🔊</button>
+                    <button id="fullscreenBtn" title="Plein écran">⛶</button>
+                    <button id="chaptersBtn" title="Chapitres">📑</button>
+                    <button id="transcriptBtn" title="Transcription">📝</button>
+                </div>
+            </div>
+            
+            <!-- Chapitres Popup -->
+            <div id="chaptersPopup" class="popup">
+                <div class="popup-content">
+                    <h3>Chapitres</h3>
+                    <div class="chapters-list" id="chaptersList">
+                        <!-- Chapitres seront injectés ici par JavaScript -->
+                    </div>
+                    <button id="closeChapters" class="close-btn">×</button>
+                </div>
+            </div>
+            
+            <!-- Transcription Popup -->
+            <div id="transcriptPopup" class="popup">
+                <div class="popup-content">
+                    <h3>Transcription</h3>
+                    <div class="transcript-content" id="transcriptContent">
+                        <!-- Transcription sera injectée ici par JavaScript -->
+                    </div>
+                    <button id="closeTranscript" class="close-btn">×</button>
+                </div>
+            </div>
+            
+            <div class="video-info">
+                <h2>À propos de cette présentation</h2>
+                <p>Cette vidéo présente le cycle de vie complet d'une application logicielle, couvrant toutes les étapes essentielles depuis l'idée initiale jusqu'à la maintenance et l'évolution du produit. Vous apprendrez comment les équipes de développement structurent leur travail pour livrer des logiciels de qualité qui répondent aux besoins des utilisateurs.</p>
+                <div class="video-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span>Étapes détaillées</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15</span>
+                        <span>Minutes de contenu</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2026</span>
+                        <span>Année de référence</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Commentaires/Feedback Section -->
+        <section class="feedback-section">
+            <h2>Laissez votre feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="feedbackName">Nom</label>
+                    <input type="text" id="feedbackName" name="name" required placeholder="Votre nom">
+                </div>
+                <div class="form-group">
+                    <label for="feedbackEmail">Email</label>
+                    <input type="email" id="feedbackEmail" name="email" required placeholder="Votre email">
+                </div>
+                <div class="form-group">
+                    <label for="feedbackRating">Note</label>
+                    <div class="rating-stars">
+                        <span class="star" data-value="1">☆</span>
+                        <span class="star" data-value="2">☆</span>
+                        <span class="star" data-value="3">☆</span>
+                        <span class="star" data-value="4">☆</span>
+                        <span class="star" data-value="5">☆</span>
+                    </div>
+                    <input type="hidden" id="feedbackRatingValue" name="rating" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="feedbackMessage">Message</label>
+                    <textarea id="feedbackMessage" name="message" rows="4" required placeholder="Partagez vos pensées sur cette présentation..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Envoyer le feedback</button>
+            </form>
+            <div id="feedbackResponse" class="feedback-response"></div>
+        </section>
+        
+        <footer>
+            <p>Vidéo de présentation - © 2026 Koffi Lévis Akalete</p>
+            <div class="social-links">
+                <a href="#" title="LinkedIn">in</a>
+                <a href="#" title="GitHub"></a>
+                <a href="#" title="Twitter">🐦</a>
+                <a href="#" title="Email">📧</a>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
